@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Bienvenido!"
-pass=$(perl -e 'crypt("pass1234", "key")')
+pass=$(perl -e 'print crypt("pass1234", "key")')
 for user in "$@"
 do
     sudo useradd $user -m -p $pass
